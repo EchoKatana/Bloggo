@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
         }
 
         // Check if email already exists
-        const existingUser = getUserByEmail(email)
+        const existingUser = await getUserByEmail(email)
         if (existingUser) {
             return NextResponse.json(
                 { error: 'Bu email adresi zaten kullanılıyor' },
@@ -86,7 +86,7 @@ export async function POST(request: NextRequest) {
         }
 
         // Check if username is available
-        if (!isUsernameAvailable(username)) {
+        if (!(await isUsernameAvailable(username))) {
             return NextResponse.json(
                 { error: 'Bu kullanıcı adı zaten kullanılıyor' },
                 { status: 409 }
@@ -94,7 +94,7 @@ export async function POST(request: NextRequest) {
         }
 
         // Create user
-        const newUser = createUser({
+        const newUser = await createUser({
             email,
             password,
             name: nickname,
