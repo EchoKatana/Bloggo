@@ -25,9 +25,9 @@ export default function NotFound() {
                 }}>
                     Aradığınız yazı mevcut değil veya kaldırılmış.
                 </p>
-                <a href="/" className="btn btn-primary">
-                    Ana Sayfaya Dön
-                </a>
+                <Link href="/" className="back-link">
+                    ← Ana Sayfaya Dön
+                </Link>
             </div>
         </div>
     )

@@ -182,7 +182,7 @@ export default function SetupProfilePage() {
                             fontSize: '0.875rem',
                             color: 'var(--color-text-dimmed)'
                         }}>
-                            Sadece yazı detay sayfalarında görünecek
+                            örn: @ahmet, @zeynep (En az 4 karakter ve sonradan değiştirilemez. Paylaştığınız yazıların altında görünecek.)
                         </div>
                     </div>
 
