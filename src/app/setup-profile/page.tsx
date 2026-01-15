@@ -206,7 +206,7 @@ export default function SetupProfilePage() {
                             fontSize: '0.875rem',
                             color: 'var(--color-text-dimmed)'
                         }}>
-                            Ana sayfada ve yazı kartlarında bu isim görünecek
+                            Sadece yazı detay sayfalarında görünecek
                         </div>
                     </div>
 
@@ -219,7 +219,7 @@ export default function SetupProfilePage() {
                         fontSize: '0.875rem',
                         color: 'var(--color-text-muted)'
                     }}>
-                        💡 <strong>İpucu:</strong> Kullanıcı adınız benzersiz kimliğinizdir ve profil URL'inizde görünür.
+                        💡 <strong>İpucu:</strong> Kullanıcı adınız benzersiz kimliğinizdir ve profil URL&apos;inizde görünür.
                         Takma adınız ise yazılarınızda insanların göreceği isminizdir.
                     </div>
 
