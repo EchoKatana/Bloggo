@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
         }
 
         // Update user profile
-        const updatedUser = updateUserProfile(session.user.id, {
+        const updatedUser = await updateUserProfile(session.user.id, {
             username,
             nickname
         })
