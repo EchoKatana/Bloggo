@@ -134,7 +134,7 @@ const authOptions: NextAuthOptions = {
         async session({ session, token }) {
             // Get user data from database using email from token
             if (token.email) {
-                const dbUser = getUserByEmail(token.email as string)
+                const dbUser = await getUserByEmail(token.email as string)
 
                 if (dbUser) {
                     session.user.id = dbUser.id
