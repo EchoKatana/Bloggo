@@ -1,14 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getUserByUsername, getPostsByUserId } from '@/lib/db'
+import { getUserByUsername, getPostsByUserId, getFollowerCount, getFollowingCount } from '@/lib/db'
 
 export async function GET(
     request: NextRequest,
-    { params }: { params: { username: string } }
+    { params }: { params: Promise<{ username: string }> }
 ) {
     try {
-        const username = params.username
+        const { username } = await params
 
-        const user = getUserByUsername(username)
+        const user = await getUserByUsername(username)
 
         if (!user) {
             return NextResponse.json(
@@ -17,7 +17,9 @@ export async function GET(
             )
         }
 
-        const posts = getPostsByUserId(user.id)
+        const posts = await getPostsByUserId(user.id)
+        const followerCount = await getFollowerCount(user.id)
+        const followingCount = await getFollowingCount(user.id)
 
         return NextResponse.json({
             user: {
@@ -25,8 +27,8 @@ export async function GET(
                 username: user.username,
                 nickname: user.nickname,
                 image: user.image,
-                followerCount: user.followers.length,
-                followingCount: user.following.length,
+                followerCount,
+                followingCount,
                 postCount: posts.length
             },
             posts

@@ -4,9 +4,10 @@ import { getUserByUsername, followUser, unfollowUser } from '@/lib/db'
 
 export async function POST(
     request: NextRequest,
-    { params }: { params: { username: string } }
+    { params }: { params: Promise<{ username: string }> }
 ) {
     try {
+        const { username } = await params
         const session = await getSession()
 
         if (!session?.user) {
@@ -16,7 +17,7 @@ export async function POST(
             )
         }
 
-        const targetUser = getUserByUsername(params.username)
+        const targetUser = await getUserByUsername(username)
 
         if (!targetUser) {
             return NextResponse.json(
@@ -32,11 +33,14 @@ export async function POST(
             )
         }
 
-        followUser(session.user.id, targetUser.id)
+        await followUser(session.user.id, targetUser.id)
+        const followerCount = await import('@/lib/db').then(mod =>
+            mod.getFollowerCount(targetUser.id)
+        )
 
         return NextResponse.json({
             success: true,
-            followerCount: targetUser.followers.length + 1
+            followerCount
         })
     } catch (error) {
         console.error('Follow error:', error)
@@ -49,9 +53,10 @@ export async function POST(
 
 export async function DELETE(
     request: NextRequest,
-    { params }: { params: { username: string } }
+    { params }: { params: Promise<{ username: string }> }
 ) {
     try {
+        const { username } = await params
         const session = await getSession()
 
         if (!session?.user) {
@@ -61,7 +66,7 @@ export async function DELETE(
             )
         }
 
-        const targetUser = getUserByUsername(params.username)
+        const targetUser = await getUserByUsername(username)
 
         if (!targetUser) {
             return NextResponse.json(
@@ -70,11 +75,14 @@ export async function DELETE(
             )
         }
 
-        unfollowUser(session.user.id, targetUser.id)
+        await unfollowUser(session.user.id, targetUser.id)
+        const followerCount = await import('@/lib/db').then(mod =>
+            mod.getFollowerCount(targetUser.id)
+        )
 
         return NextResponse.json({
             success: true,
-            followerCount: Math.max(0, targetUser.followers.length - 1)
+            followerCount
         })
     } catch (error) {
         console.error('Unfollow error:', error)
