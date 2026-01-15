@@ -1,6 +1,38 @@
 import { prisma } from './prisma'
 import bcrypt from 'bcryptjs'
-import { User as PrismaUser, Post as PrismaPost, Follow as PrismaFollow } from '@prisma/client'
+
+// ============ TYPES ============
+type PrismaUser = {
+    id: string
+    email: string
+    name: string | null
+    username: string
+    nickname: string
+    password: string | null
+    image: string | null
+    createdAt: Date
+    updatedAt: Date
+}
+
+type PrismaPost = {
+    id: string
+    title: string
+    content: string
+    userId: string
+    author: string
+    username: string
+    nickname: string
+    date: Date
+    createdAt: Date
+    updatedAt: Date
+}
+
+type PrismaFollow = {
+    id: string
+    followerId: string
+    followingId: string
+    createdAt: Date
+}
 
 // ============ TYPES ============
 
