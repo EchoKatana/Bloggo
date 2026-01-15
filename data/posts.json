@@ -1,0 +1,56 @@
+[
+  {
+    "id": "d50f1712-3ed2-4725-a182-63c6bf69b90c",
+    "title": "dsdsfsds",
+    "content": "dsdsfasdafsdasd",
+    "author": "Admin",
+    "userId": "0fd8ddbf-0f14-45f3-b720-233dd4c001af",
+    "username": "@admin",
+    "nickname": "Admin",
+    "excerpt": "dsdsfasdafsdasd",
+    "date": "2026-01-15T16:35:08.270Z"
+  },
+  {
+    "id": "8c9ae5dd-3e45-486a-84e2-c348f3329fb0",
+    "title": "AAAAAAAAAAA",
+    "content": "bcccccccccccccccccccc",
+    "author": "AAbbbbbbbb",
+    "excerpt": "bcccccccccccccccccccc",
+    "date": "2026-01-14T20:42:11.558Z"
+  },
+  {
+    "id": "600aff86-d922-49c9-92fb-b4d37ae9ef96",
+    "title": "sdsdsds",
+    "content": "afdsgfasdgasfdasdads",
+    "author": "fsadfgasd",
+    "excerpt": "afdsgfasdgasfdasdads",
+    "date": "2026-01-14T20:42:03.497Z"
+  },
+  {
+    "id": "ad723ebc-1994-4a71-8e0d-e77c90c6ca3f",
+    "title": "Bugün bi kuş gördüm",
+    "content": "sarı falandı yani ne bileyim maviydi yada mordecai gibi",
+    "author": "Yankı",
+    "excerpt": "sarı falandı yani ne bileyim maviydi yada mordecai gibi",
+    "date": "2026-01-14T20:41:28.353Z"
+  },
+  {
+    "id": "1597dbea-7531-4bf0-86fb-d721bdd52412",
+    "title": "ddf",
+    "content": "ddfdfdfsdsdsfssdsfsdsd",
+    "author": "dfdf",
+    "excerpt": "ddfdfdfsdsdsfssdsfsdsd",
+    "date": "2026-01-14T20:33:11.478Z"
+  },
+  {
+    "id": "5f37113b-1cea-4215-a275-e970d90b2c7c",
+    "title": "Bu blog uygulaması harika oldu",
+    "content": "Gerçekten yapay zeka ile yapabileceklerinin sınırı yok. Var gerçi, HAYAL GÜCÜ!",
+    "author": "Yankı",
+    "userId": "1f624282-0e81-46b9-a784-963663a158e1",
+    "username": "@yankelic",
+    "nickname": "Yankı",
+    "excerpt": "Gerçekten yapay zeka ile yapabileceklerinin sınırı yok. Var gerçi, HAYAL GÜCÜ!",
+    "date": "2026-01-15T16:44:29.502Z"
+  }
+]

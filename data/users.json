@@ -1,0 +1,24 @@
+[
+  {
+    "id": "0fd8ddbf-0f14-45f3-b720-233dd4c001af",
+    "email": "admin@blogapp.local",
+    "name": "Admin",
+    "username": "@admin",
+    "nickname": "Admin",
+    "password": "$2b$10$T8OCRKT9EoR0fWGPy9QYJOSTQhWn0JZXLthVB44jmfIz05VSokb8C",
+    "followers": [],
+    "following": [],
+    "createdAt": "2026-01-14T21:01:11.579Z"
+  },
+  {
+    "id": "1f624282-0e81-46b9-a784-963663a158e1",
+    "email": "yankikilic2855@gmail.com",
+    "name": "Yankı",
+    "username": "@yankelic",
+    "nickname": "Yankı",
+    "password": "$2b$10$9qBEwtIDagKECosQ7n9Vt.esnUg.Incw3QAmLRa49w/ntS07Ezx0G",
+    "followers": [],
+    "following": [],
+    "createdAt": "2026-01-15T16:43:38.649Z"
+  }
+]
