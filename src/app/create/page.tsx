@@ -16,15 +16,8 @@ export default function CreatePostPage() {
     useEffect(() => {
         if (status === 'unauthenticated') {
             router.push('/login?callbackUrl=/create')
-            return
         }
-
-        if (status === 'authenticated' && session?.user) {
-            if (!session.user.username || !session.user.nickname) {
-                router.push('/setup-profile')
-            }
-        }
-    }, [status, session, router])
+    }, [status, router])
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault()
