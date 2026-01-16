@@ -18,6 +18,7 @@ type PrismaPost = {
     id: string
     title: string
     content: string
+    excerpt?: string
     userId: string
     author: string
     username: string
