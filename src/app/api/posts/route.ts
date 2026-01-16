@@ -36,13 +36,6 @@ export async function POST(request: NextRequest) {
             )
         }
 
-        // Check if user has set up their profile
-        if (!session.user.username || !session.user.nickname) {
-            return NextResponse.json(
-                { success: false, error: 'Please complete your profile setup before creating posts' },
-                { status: 403 }
-            )
-        }
 
         const body = await request.json()
 
