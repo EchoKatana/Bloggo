@@ -156,7 +156,7 @@ export const getFollowers = async (userId: string): Promise<User[]> => {
         where: { followingId: userId },
         include: { follower: true }
     })
-    return follows.map(f => f.follower)
+    return follows.map((f: any) => f.follower)
 }
 
 export const getFollowing = async (userId: string): Promise<User[]> => {
