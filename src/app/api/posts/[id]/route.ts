@@ -18,7 +18,7 @@ export async function GET(
             )
         }
 
-        const post = getPostById(id)
+        const post = await getPostById(id)
 
         if (!post) {
             return NextResponse.json(
@@ -27,7 +27,15 @@ export async function GET(
             )
         }
 
-        return NextResponse.json({ success: true, post })
+        // Serialize dates for JSON
+        const serializedPost = {
+            ...post,
+            date: post.date.toISOString(),
+            createdAt: post.createdAt.toISOString(),
+            updatedAt: post.updatedAt.toISOString()
+        }
+
+        return NextResponse.json({ success: true, post: serializedPost })
     } catch (error) {
         console.error('GET /api/posts/[id] error:', error)
 
