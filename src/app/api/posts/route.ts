@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
             )
         }
 
-        const newPost = createPost({
+        const newPost = await createPost({
             title: sanitizedTitle,
             content: sanitizedContent,
             userId: session.user.id,
