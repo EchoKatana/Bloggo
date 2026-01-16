@@ -29,7 +29,7 @@ export default async function Header() {
                         fontSize: '1.75rem',
                         fontFamily: 'var(--font-display)'
                     }}>
-                        ✨ BlogApp
+                        ✨ Bloggo
                     </h2>
                 </Link>
 
