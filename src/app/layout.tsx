@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import AuthProvider from '@/components/AuthProvider'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
     title: 'BlogApp - Modern Blogging Platform',
@@ -19,6 +20,7 @@ export default function RootLayout({
                 <AuthProvider>
                     <Header />
                     {children}
+                    <Footer />
                 </AuthProvider>
             </body>
         </html>
