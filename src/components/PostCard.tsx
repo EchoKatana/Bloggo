@@ -63,7 +63,7 @@ export default function PostCard({ post }: PostCardProps) {
                         <span>{post.author}</span>
                     )}
                     <span>•</span>
-                    <time dateTime={post.date}>{formattedDate}</time>
+                    <time dateTime={new Date(post.date).toISOString()}>{formattedDate}</time>
                 </div>
             </div>
 
