@@ -24,7 +24,7 @@ export default async function HomePage() {
                     margin: '0 auto',
                     lineHeight: '1.8'
                 }}>
-                    Düşüncelerinizi paylaşın, hikayelerinizi anlatın. Modern ve güçlü blog platformu ile yazılarınızı dünyayla buluşturun.
+                    Diğer insanların yazılarını okuyun!
                 </p>
             </section>
 
